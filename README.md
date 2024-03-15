@@ -1,4 +1,4 @@
-# MERN Stack Photo Album Platform
+# MERN Stack Photography portfolio web platform
 
 This project is built using the MERN (MongoDB, Express.js, React, Node.js) stack, providing a robust and user-friendly platform for both owners and customers. The platform serves as an avenue for owners to showcase their skills and work through photo albums while allowing customers to browse through these albums, view the owner's skills, and easily access their contact details. Additionally, customers can take advantage of a new feature allowing them to customize their package according to their preferences.
 
