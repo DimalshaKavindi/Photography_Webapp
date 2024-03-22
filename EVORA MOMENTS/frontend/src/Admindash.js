@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "./UserContext";
 
 function Admindash() {
@@ -8,7 +8,7 @@ function Admindash() {
 
   const Logout = () => {
     setUser(null);
-    navigate("/home");
+    navigate("/");
   };
 
   const adminnav = (

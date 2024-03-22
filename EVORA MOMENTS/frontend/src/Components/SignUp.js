@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import axios from "axios";
+import React, { useState } from "react";
 
 function SignUp() {
   const navLinkStyle = {
@@ -126,7 +126,7 @@ function SignUp() {
             </div>
             </div>
             <nav style={navContainerStyle}>
-            <a href="/home" style={navLinkStyle}>Back</a>
+            <a href="/" style={navLinkStyle}>Back</a>
         </nav>
       </header>
     </div>
