@@ -1,6 +1,6 @@
-import React, { useState, useContext } from "react"
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 
 function LogIn() {
@@ -149,7 +149,7 @@ function LogIn() {
               </div>
               </div>
               <nav style={navContainerStyle}>
-              <a href="/home" style={navLinkStyle}>Back</a>
+              <a href="/" style={navLinkStyle}>Back</a>
               </nav>
         </header>
       </div>

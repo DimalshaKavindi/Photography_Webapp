@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Gallery(){
@@ -23,6 +23,7 @@ function Gallery(){
         marginLeft: '25px', 
         marginRight: '20px', 
         textDecoration: 'none',
+        fontWeight:'bold',
       };
     
       const headerStyle = {
@@ -53,10 +54,11 @@ function Gallery(){
       };
     
       const logoStyle = {
-        
-        width: '120px', 
+        width: '120px',
+        marginLeft: '40px',
+        marginTop: '15px'
       };
-
+      
     const contentStyle = {
       backgroundColor: "#776551", 
       padding: '20px', 
@@ -71,37 +73,61 @@ function Gallery(){
       padding:"80px"
     };
 
+    const handleHover = (e) => {
+      e.target.style.textDecoration = 'none';
+      e.target.style.color = "#A38469";
+  
+      if (e.target.classList.contains('login-box')) {
+        e.target.style.backgroundColor = "#FFFFFF"; // Change to the desired hover color
+      }
+    };
+  
+    const handleHoverExit = (e) => {
+      e.target.style.textDecoration = 'none';
+      e.target.style.color = "white";
+  
+      if (e.target.classList.contains('login-box')) {
+        e.target.style.backgroundColor = "#A38469"; // Change to the desired hover color
+      }
+    };
+
   return (
     <div>
       <div>
-            <header style={headerStyle}>
-          <div style={overlayStyle}></div>
-          <div className="left">
-            <img
-              src="./Images/logo1.png"
-              style={logoStyle}
-              className="nav-image"
-              alt="Logo"
-            />
+      <header style={headerStyle}>
+                <div style={overlayStyle}></div>
+                <div className="logo">
+                    <img
+                        src="./Images/logo1.png"
+                        style={logoStyle}
+                        className="nav-image"
+                        alt="Logo"
+                    />
+
             <nav style={navContainerStyle}>
-              <a href="/home" style={navLinkStyle}>
-                Home
-              </a>
-              <a href="/about" style={navLinkStyle}>
-                About Us
-              </a>
-              <a href="/gallery" style={navLinkStyle}>
-                Galleries
-              </a>
-              <a href="/contact" style={navLinkStyle}>
-                Contact Us
-              </a>
-              <a href="/login" style={navLinkStyle}>
-                Log In
-              </a>
-              <a href="/signup" style={navLinkStyle}></a>
-            </nav>
-            </div>
+            <a href="/" style={navLinkStyle} onMouseEnter={handleHover} onMouseLeave={handleHoverExit}>
+              Home
+            </a>
+            <a href="/about" style={navLinkStyle} onMouseEnter={handleHover} onMouseLeave={handleHoverExit}>
+              About Us
+            </a>
+            <a href="/gallery" style={navLinkStyle} onMouseEnter={handleHover} onMouseLeave={handleHoverExit}>
+              Galleries
+            </a>
+
+            <a href="/contact" style={navLinkStyle} onMouseEnter={handleHover} onMouseLeave={handleHoverExit}>
+              Contact Us
+            </a>
+
+            <a href="/connect" style={navLinkStyle} onMouseEnter={handleHover} onMouseLeave={handleHoverExit}>
+            <div className="login-box" style={{ height: "30px", width: "95px", color: "white", backgroundColor: "#A38469", justifyContent: "center", borderRadius: "5px", paddingLeft: "12px", paddingTop: '2px', fontWeight:"revert-layer" }}>
+                Connect
+              </div>
+            </a>
+                        <a href="/signup" style={navLinkStyle}></a>
+                    </nav>
+                </div>
+                
             </header>
             </div>
             <div style={contentStyle} >
