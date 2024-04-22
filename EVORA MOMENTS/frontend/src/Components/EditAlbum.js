@@ -33,10 +33,10 @@ function EditAlbum() {
 
   const handleImageChange = (event) => {
     const images = event.target.files;
-    const newImages = Array.from(images); 
+    const newImages = Array.from(images);
     setFormData({
       ...formData,
-      images: [...formData.images, ...newImages], 
+      images: [...formData.images, ...newImages],
     });
   };
   
@@ -48,7 +48,7 @@ function EditAlbum() {
         .then((response) => {
           if (response.status === 200) {
             console.log('Album updated successfully');
-            setSelectedAlbum(null); 
+            setSelectedAlbum(null);
             setFormData({
               Album_Category: '',
               Name: '',

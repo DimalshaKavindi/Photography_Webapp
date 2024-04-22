@@ -48,7 +48,6 @@ router.route("/getdetails").get((req,res) =>{
 })
 
 router.route("/update/:id").put(async (req, res) => {
-  
     const albumId = req.params.id;
     const { Album_Category , Name , Description, images} = req.body;
     
