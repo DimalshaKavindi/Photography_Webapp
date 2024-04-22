@@ -1,15 +1,8 @@
 import React from "react";
 import Footer from "./Footer";
+import Header from "./Header";
 
 function About() {
-  const navLinkStyle = {
-    color: 'white',
-    marginLeft: '25px', 
-    marginRight: '20px', 
-    textDecoration: 'none',
-    fontWeight: 'bold',
-  };
-
   const headerStyle = {
     background: `url('./Images/back2.jpg')`,
     backgroundSize: 'cover',
@@ -48,69 +41,14 @@ function About() {
     padding: '20px', 
   };
 
-  const putterStyle = {
-    backgroundColor: "#5E503F", 
-    height :'150px',
-    display: "flex", 
-    flexDirection: "column", 
-    alignItems: "center" ,
-    padding:"80px"
-  };
+ 
 
-  const handleHover = (e) => {
-    e.target.style.textDecoration = 'none';
-    e.target.style.color = "#A38469";
-
-    if (e.target.classList.contains('login-box')) {
-      e.target.style.backgroundColor = "#FFFFFF"; // Change to the desired hover color
-    }
-  };
-
-  const handleHoverExit = (e) => {
-    e.target.style.textDecoration = 'none';
-    e.target.style.color = "white";
-
-    if (e.target.classList.contains('login-box')) {
-      e.target.style.backgroundColor = "#A38469"; // Change to the desired hover color
-    }
-  };
 
   return (
     <div>
       <header style={headerStyle}>
                 <div style={overlayStyle}></div>
-                <div className="left">
-                    <img
-                        src="./Images/logo1.png"
-                        style={logoStyle}
-                        className="nav-image"
-                        alt="Logo"
-                    />
-
-            <nav style={navContainerStyle}>
-            <a href="/" style={navLinkStyle} onMouseEnter={handleHover} onMouseLeave={handleHoverExit}>
-              Home
-            </a>
-            <a href="/about" style={navLinkStyle} onMouseEnter={handleHover} onMouseLeave={handleHoverExit}>
-              About Us
-            </a>
-            <a href="/gallery" style={navLinkStyle} onMouseEnter={handleHover} onMouseLeave={handleHoverExit}>
-              Galleries
-            </a>
-
-            <a href="/contact" style={navLinkStyle} onMouseEnter={handleHover} onMouseLeave={handleHoverExit}>
-              Contact Us
-            </a>
-
-            <a href="/connect" style={navLinkStyle} onMouseEnter={handleHover} onMouseLeave={handleHoverExit}>
-            <div className="login-box" style={{ height: "30px", width: "95px", color: "white", backgroundColor: "#A38469", justifyContent: "center", borderRadius: "5px", paddingLeft: "12px", paddingTop: '2px', fontWeight:"revert-layer" }}>
-                Connect
-              </div>
-            </a>
-                        <a href="/signup" style={navLinkStyle}></a>
-                    </nav>
-                </div>
-                
+                <Header/>
             </header>
       <div style={contentStyle} >
         <div style={{marginBottom:"60px"}}>
@@ -165,7 +103,6 @@ function About() {
           </ul>
         </div>
       </div>
-
       <Footer/>
     </div>
   );
