@@ -45,7 +45,6 @@ function Footer() {
                 <p>To find out more about our services!</p>
                 <p style={{ marginTop: '0px' }}>Please call us with any questions, or send us a message to learn more.</p>
               </div>
-
             </div>
             <div className="row" style={{marginRight:'75px'}}>
               <div style={{marginTop:'25px'}}>
@@ -60,9 +59,9 @@ function Footer() {
               </div>
             </div>
         </div>
-        <div style={{color:"white"}}>
+        <div className="footer-bottom"  style={{color:"white"}}>
           <hr />
-          <p style={{ fontSize: '10px',  marginLeft:"95px", color:"ghostwhite", fontWeight:'bolder'}}>COPYRIGHT 2023 © EVORA MOMENTS PHOTOGRAPHY</p>
+          <p style={{ fontSize: '10px',  textAlign:'center', color:"ghostwhite", fontWeight:'bolder'}}>COPYRIGHT 2023 © EVORA MOMENTS PHOTOGRAPHY</p>
         </div>
       </div>
     </footer>
