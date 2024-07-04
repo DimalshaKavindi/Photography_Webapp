@@ -10,29 +10,29 @@ pipeline {
                     bat 'dir'
                     echo 'Cloning repository...'
                     retry(3) {
-                        git branch: 'main', url: 'https://github.com/DhananjiMadhushika/Salon-Wave.git'
+                        git branch: 'master', url: 'https://github.com/DimalshaKavindi/Photography_Webapp.git'
                     }
                 }
             }
         }
         stage('Build Docker Image') {
             steps {  
-                bat 'docker build -t dhananji123/salon-app:%BUILD_NUMBER% .'
+                bat 'docker build -t DimalshaKavindi/photography-web:%BUILD_NUMBER% .'
             }
         }
         stage('Login to Docker Hub') {
             steps {
-                withCredentials([string(credentialsId: 'salonapp-password', variable: 'salonapp_pass')]) {
+                withCredentials([string(credentialsId: 'photoapp-password', variable: 'photoapp_pw')]) {
                     script {
                         echo 'Logging in to Docker Hub...'
-                        bat "echo ${salonapp_pass} | docker login -u dhananji123 --password-stdin"
+                        bat "echo ${salonapp_pass} | docker login -u DimalshaKavindi --password-stdin"
                     }
                 }
             }
         }
         stage('Push Image') {
             steps {
-                bat 'docker push dhananji123/salon-app:%BUILD_NUMBER%'
+                bat 'docker push DimalshaKavindi/photography-app:%BUILD_NUMBER%'
             }
         }
     }

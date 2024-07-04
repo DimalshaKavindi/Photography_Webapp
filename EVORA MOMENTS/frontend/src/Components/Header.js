@@ -29,7 +29,7 @@ function Header() {
     e.target.style.color = "#A38469";
 
     if (e.target.classList.contains('login-box')) {
-      e.target.style.backgroundColor = "#FFFFFF"; // Change to the desired hover color
+      e.target.style.backgroundColor = "#FFFFFF"; 
     }
   };
 
@@ -38,7 +38,7 @@ function Header() {
     e.target.style.color = "white";
 
     if (e.target.classList.contains('login-box')) {
-      e.target.style.backgroundColor = "#A38469"; // Change to the desired hover color
+      e.target.style.backgroundColor = "#A38469"; 
     }
   };
 
