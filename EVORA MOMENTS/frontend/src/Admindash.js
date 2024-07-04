@@ -17,12 +17,13 @@ function Admindash() {
         <div className="nav nav-tabs" id="nav-tab" role="tablist">
           <Link
             to="/editalbum"
-            className="nav-item nav-link custom-link" 
+            className="nav-item nav-link custom-link"
             id="nav-contact-tab"
             data-toggle="tab"
             role="tab"
             aria-controls="nav-contact"
             aria-selected="false"
+            style={{color: "white", fontSize:"16px"}}
           >
             Albums
           </Link>
@@ -34,6 +35,7 @@ function Admindash() {
             role="tab"
             aria-controls="nav-contact"
             aria-selected="false"
+            style={{color: "white", fontSize:"16px"}}
           >
             Customer Messages
           </Link>
@@ -45,6 +47,7 @@ function Admindash() {
             role="tab"
             aria-controls="nav-contact"
             aria-selected="false"
+            style={{color: "white", fontSize:"16px"}}
           >
             Customers Details
           </Link>
@@ -61,7 +64,7 @@ function Admindash() {
           ...
         </div>
       </div>
-      <button className="btn nav-link" onClick={Logout} style={{ position: "absolute", top: "25px", right: "15px" }}>
+      <button className="btn nav-link" onClick={Logout} style={{color:"white", position: "absolute", top: "25px", right: "15px", backgroundColor:"#DEB887" }}>
         Logout
       </button>
     </div>
@@ -83,7 +86,7 @@ function Admindash() {
       <ul className="navbar-nav mx-auto">
         {user ? (
           <li className="nav-item">
-            {user.Email === "Admin@gmail.com" ? (
+            {user.Email === "Admin123@gmail.com" ? (
               <div style={{ position: "left" }}>
                 {adminnav}
                 <Link className="nav-link" to="/Admindash" style={{ position: "absolute", top: "0", right: "0" }}></Link>
