@@ -86,7 +86,7 @@ function Admindash() {
       <ul className="navbar-nav mx-auto">
         {user ? (
           <li className="nav-item">
-            {user.Email === "Admin123@gmail.com" ? (
+            {user.Email === "Admin@gmail.com" ? (
               <div style={{ position: "left" }}>
                 {adminnav}
                 <Link className="nav-link" to="/Admindash" style={{ position: "absolute", top: "0", right: "0" }}></Link>
@@ -100,7 +100,7 @@ function Admindash() {
         ) : null}
         <li className="nav-item">
           {user ? (
-            <button className="btn nav-link" onClick={Logout} style={{ position: "absolute", top: "25px", right: "15px" }}>
+            <button className="btn nav-link" onClick={Logout} style={{ position: "absolute", top: "25px", right: "5px" }}>
               Logout
             </button>
           ) : (

@@ -63,7 +63,7 @@ function LogIn() {
 
     const admin = {
       Email: "Admin@gmail.com",
-      Password: "123456"
+      Password: "1234"
     };
   
     const newlogIn={
